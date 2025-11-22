@@ -1,148 +1,118 @@
-📌 Descripción del Proyecto
+📘 Actividad Fundamental N.º 6 – Modelo Supervisado en Python
+🎯 Descripción General
 
-Este repositorio contiene la Actividad Fundamental 6 de la materia Programación para Inteligencia Artificial.
-El objetivo es implementar un modelo de aprendizaje supervisado utilizando el algoritmo de Regresión Lineal, aplicando:
+Este repositorio corresponde a la Actividad Fundamental N.º 6 de la materia Programación para Inteligencia Artificial (FIME – UANL).
+El objetivo es implementar un modelo de aprendizaje supervisado utilizando Regresión Lineal aplicado al dataset Advertising, siguiendo un enfoque modular y reproducible dentro de un entorno virtual de Anaconda.
 
-Carga y análisis del dataset
+El sistema implementado incluye:
 
-Preprocesamiento y limpieza
+Lectura y limpieza del dataset Advertising.csv.
 
-Normalización con MinMaxScaler
+Normalización de características mediante MinMaxScaler.
 
-División del dataset (Train/Test)
+División del dataset en conjuntos Train / Test (70% / 30%).
 
-Entrenamiento del modelo
+Entrenamiento del modelo de Regresión Lineal (LinearRegression).
 
-Evaluación con métricas de regresión
+Cálculo de métricas de desempeño: MSE, RMSE y R².
 
-Visualización de resultados
+Generación de gráficas: matriz de correlación, reales vs predichas, residuales.
 
-Desarrollo en un entorno virtual de Anaconda
+Uso de un entorno virtual para mantener el proyecto ordenado y reproducible.
 
-Arquitectura modular en Python
+1. 🧩 Estructura Modular del Código
 
-📊 Dataset utilizado
+El proyecto se dividió en tres módulos principales, siguiendo las buenas prácticas vistas en clase y el estilo de trabajo requerido en las Actividades Fundamentales:
 
-Advertising Dataset
-Archivo: Advertising.csv
+Archivo	Responsabilidad Principal
+main.py	Flujo de Control. Ejecuta el proyecto completo: carga, normalización, entrenamiento, evaluación y visualización del modelo.
+data_io.py	Entrada y Limpieza de Datos. Contiene la lógica para cargar el dataset, explorar las columnas, eliminar duplicados y limpiar información.
+processing.py	Procesamiento y Transformaciones. Implementa la normalización con MinMaxScaler y la división Train/Test.
+2. 🛠️ Instalación y Entorno (af6)
 
-Contiene 200 registros con inversión publicitaria en:
+El proyecto fue desarrollado en un entorno virtual creado con Anaconda utilizando Python 3.11.
 
-TV
+🔹 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/AF6
+cd AF6
 
-Radio
-
-Newspaper
-
-Y la variable objetivo:
-
-Sales (ventas)
-
-Este dataset es ideal para tareas de regresión supervisada.
-
-🧠 Modelo seleccionado
-✔️ Regresión Lineal
-
-Implementado con:
-
-from sklearn.linear_model import LinearRegression
-
-✔️ Razones para elegirlo:
-
-Es un modelo supervisado clásico
-
-Fácil de interpretar
-
-Excelente para relaciones lineales
-
-Dataset pequeño y limpio
-
-Totalmente adecuado para la AF6
-
-📁 Estructura del proyecto
-AF6/
-│
-├── main.py
-├── data_io.py
-├── processing.py
-├── Advertising.csv
-└── README.md
-
-Archivo	Descripción
-main.py	Controla todo el flujo (modelo, gráficas, métricas)
-data_io.py	Carga, limpieza y exploración del dataset
-processing.py	Normalización y separación de datos
-Advertising.csv	Dataset empleado
-README.md	Documentación del proyecto
-🛠️ Requisitos del entorno
-
-Entorno recomendado (Anaconda):
-
+🔹 2. Crear y activar el entorno virtual
 conda create -n af6 python=3.11 -y
 conda activate af6
 
-
-Instalar dependencias:
-
+🔹 3. Instalar dependencias necesarias
 conda install numpy pandas scikit-learn matplotlib openpyxl spyder -y
 
-▶️ Cómo ejecutar el proyecto
+3. ▶️ Ejecución del Proyecto
 
-Clonar el repositorio:
-
-git clone https://github.com/tu-usuario/AF6
-
-
-Activar el entorno:
-
-conda activate af6
-
-
-Abrir Spyder desde ese entorno:
+Una vez activado el entorno y abierto Spyder, basta con ejecutar:
 
 spyder
 
 
-En Spyder:
+Luego:
 
 Abrir main.py
 
-Verificar que el Working Directory sea la carpeta AF6
+Asegurar que el Working Directory corresponde a la carpeta del proyecto
 
 Ejecutar con F5
 
-📈 Resultados obtenidos
+El programa:
 
-El proyecto genera:
+Carga el dataset
 
-📌 Matriz de correlación
+Limpia y normaliza los datos
 
-Relación entre variables de entrada y la salida (Sales).
+Entrena el modelo
 
-📌 Gráfica Reales vs Predichas
+Evalúa su rendimiento
 
-Demuestra qué tan bien ajusta el modelo.
+Genera gráficas y métricas en consola
 
-📌 Gráfica de Residuales
+📦 Salida del modelo
 
-Verifica el comportamiento del error.
+El programa imprime:
 
-📌 Métricas del modelo
-Métrica	Valor
-MSE	3.79
-RMSE	1.95
-R²	0.86
+Coeficientes del modelo
 
-El modelo logra explicar el 86% de la variabilidad de las ventas.
+MSE
 
-🧩 Conclusiones del equipo
+RMSE
 
-La Regresión Lineal resultó eficiente para este conjunto de datos.
+R²
 
-La normalización mejoró la estabilidad numérica del modelo.
+Y genera 3 visualizaciones clave:
 
-La estructura modular permitió un desarrollo más claro y mantenible.
+Matriz de correlación
 
-Las métricas obtenidas confirman que el modelo generaliza correctamente.
+Reales vs predichas
 
-El uso de un entorno virtual garantiza reproducibilidad y organización del proyecto.
+Residuales
+
+Ejemplo de resultados obtenidos:
+
+MSE: 3.79
+
+RMSE: 1.95
+
+R²: 0.86
+
+🧠 Conclusiones
+
+Este proyecto demuestra la implementación correcta de un modelo supervisado con Python siguiendo una estructura modular.
+Se cumplieron los objetivos de la AF6:
+
+Aplicación del preprocesamiento de datos
+
+Normalización de características
+
+Entrenamiento de un modelo supervisado
+
+Evaluación mediante métricas estándar
+
+Uso de un entorno virtual con Anaconda
+
+Control de versiones mediante Git y GitHub
+
+El modelo de regresión lineal ofreció un rendimiento destacado, explicando aproximadamente el 86% de la variabilidad de las ventas. Las gráficas generadas permitieron analizar el comportamiento del modelo y validar su adecuación al dataset empleado.
